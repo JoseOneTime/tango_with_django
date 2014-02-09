@@ -11,7 +11,7 @@ html
 		- if categories
 			ul
 				- for category in categories
-					li= category.name
+					li: a(href='category/#{category.url}')= category.name
 		- else
 			strong There are no categories.
 

@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+	head
+		title= 'Category: #{category_name} | Rango'
+	body
+		h1= category_name
+		- if category
+			- if pages
+				ul
+					- for page in pages
+						li: a(href=page.url)= page.title
+			- else
+				strong There are no pages in this category.
+		- else
+			p= 'Category #{category_name} does not exist.'
