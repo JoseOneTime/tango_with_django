@@ -1,5 +1,7 @@
 doctype html
 
+- load static
+
 html
 	head
 		title Rango
@@ -10,4 +12,5 @@ html
 		br
 		a(href='/rango/about') About
 		br
-		img(src=STATIC_URL + 'rango.jpg', alt='Picture of Rango')
+		img(src!={% static 'rango.jpg' %}, alt='Picture of Rango')
+		
