@@ -6,11 +6,14 @@ html
 	head
 		title Rango
 	body
-		h1 Rango says... 
-		| Hello World
-		strong= boldmessage
-		br
+		h1 Rango says... Hello World!
+		img(src!={% static 'rango.jpg' %}, alt='Pic of Rango')
+		- if categories
+			ul
+				- for category in categories
+					li= category.name
+		- else
+			strong There are no categories.
+
 		a(href='/rango/about') About
-		br
-		img(src!={% static 'rango.jpg' %}, alt='Picture of Rango')
 		
